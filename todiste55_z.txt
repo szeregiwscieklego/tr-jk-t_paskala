@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{amsmath,tikz,pgfplots}
+\begin{document}
+\begin{minipage}{0.3\textwidth}
+\begin{tikzpicture}[smooth,scale=0.4]
+\begin{axis}[ytick=\empty,xtick=\empty,axis lines=middle]
+  \addplot[blue] {((x-4)+4)/((x-4)-8)+3};
+  \addplot[blue] {((x-4)+4.2)/((x-4)-7.8)+2.8};
+  \addplot[blue,domain=-0.5:4] {(-x+1)/(-x-1)+2};
+  \addplot[blue,domain=-0.5:4] {(-x+0.8)/(-x-1.2)+2.2};
+  \addplot[color=green] coordinates {
+		(3.5,2.6)
+		(3.5,-1)
+	};
+  \addplot[color=green] coordinates {
+		(2.77,2.47)
+		(2.77,-1)
+	};
+  \addplot[color=green] coordinates {
+		(3.5,2.6)
+		(6,2.6)
+	};
+  \addplot[color=green] coordinates {
+		(2.77,2.47)
+		(6,2.47)
+	};
+  \addplot[color=purple] coordinates {
+		(2,2.6)
+		(-3,2.6)
+	};
+  \addplot[color=purple] coordinates {
+		(2.77,2.47)
+		(-3,2.47)
+	};
+  \addplot[color=purple] coordinates {
+		(2,2.6)
+		(2,3.2)
+	};
+  \addplot[color=purple] coordinates {
+		(2.77,2.47)
+		(2.77,3.2)
+	};
+\end{axis}
+\scriptsize \node at(5,-0.5) [thick] {$\delta x$};
+\scriptsize \node at(0.3,4.5) [thick] {$\delta s$};
+\scriptsize \node at(4.5,6.2) [thick] {$\delta r$};
+\scriptsize \node at(7.5,4.5) [thick] {$\delta y$};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\begin{tikzpicture}[smooth,scale=0.4]
+\begin{axis}[ytick=\empty,xtick=\empty,xmin=-1,xmax=3,ymin=-1,ymax=4,axis lines=middle]
+  	\addplot[color=red] coordinates {
+		(-1,1)
+		(4,1)
+	};
+	\addplot[color=red] coordinates {
+		(-1,1.4)
+		(4,1.4)
+	};
+  	\addplot[color=red] coordinates {
+		(1,-1)
+		(1,4)
+	};
+	\addplot[color=red] coordinates {
+		(1.4,-1)
+		(1.4,4)
+	};
+\end{axis}
+\scriptsize \node at(4,-0.5) [thick] {$\delta u$};
+\scriptsize \node at(-0.8,2.5) [thick] {$\delta v$};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+\centering
+\scriptsize
+$<\delta x,\delta y>=<\frac{\delta x}{\delta u}\delta u,\frac{\delta y}{\delta u}\delta u>=\delta u<\frac{\delta x}{\delta u},\frac{\delta y}{\delta u}>$
+\\$<\delta r,\delta s>=<\frac{\delta x}{\delta v}\delta v,\frac{\delta y}{\delta v}\delta v>=\delta v<\frac{\delta x}{\delta v},\frac{\delta y}{\delta v}>$
+\begin{equation}
+\begin{bmatrix}
+\frac{ \delta x}{\delta u}\delta u & \frac{ \delta y}{\delta u}\delta u \\
+\frac{ \delta x}{\delta v}\delta v & \frac{ \delta y}{\delta v}\delta v
+\end{bmatrix}=\Bigg[\frac{ \delta x}{\delta u}\frac{ \delta y}{\delta v}-\frac{ \delta x}{\delta v}\frac{ \delta y}{\delta u}\Bigg]\delta u\delta v
+\end{equation}
+\end{minipage}
+\end{document}

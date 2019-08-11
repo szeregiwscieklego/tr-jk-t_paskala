@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\begin{document}
+$csh^2x-snh^2x=(\frac{e^x+e^{-x}}{2})^2-(\frac{e^x-e^{-x}}{2})^2=$
+\\$\frac{1}{4}((e^{2x}+2e^xe^{-x}+e^{-2x})-(e^{2x}-2e^xe^{-x}+e^{-2x}))=\frac{1}{4}(4e^xe^{-x})=1$
+\\
+\\$snhxcshy+cshxsnhy=\frac{e^x-e^{-x}}{2}\frac{e^y+e^{-y}}{2}+\frac{e^x+e^{-x}}{2}\frac{e^y-e^{-y}}{2}=$
+\\$\frac{1}{4}((e^{x+y}+e^{x-y}-e^{y-x}-e^{-x-y})+(e^{x+y}-e^{x-y}+e^{y-x}-e^{-x-y}))=$
+\\$\frac{1}{4}(2e^{x+y}-2e^{-(x+y)})=snh(x+y)$
+\\
+\\$cshxcshy+snhxsnhy=\frac{e^x+e^{-x}}{2}\frac{e^y+e^{-y}}{2}+\frac{e^x-e^{-x}}{2}\frac{e^y-e^{-y}}{2}=$
+\\$\frac{1}{4}((e^{x+y}+e^{x-y}+e^{y-x}+e^{-x-y})+(e^{x+y}-e^{x-y}-e^{y-x}+e^{-x-y}))=$
+\\$\frac{1}{4}(2e^{x+y}+2e^{-(x+y)})=csh(x+y)$
+\\ . \\ . \\
+\begin{minipage}{0.5\textwidth}
+$\forall _{x \geq 0 } \ y=snhx$
+\\$\Leftrightarrow 2y=e^x-e^{-x}$
+\\$\Leftrightarrow 2ye^x=e^{2x}-1$
+\\$\Leftrightarrow (e^x)^2-2y(e^x)-1=0$
+\\$\Delta =(-2y)^2+4=4(y^2+1)$
+\\$ \Rightarrow e^x=y \pm \sqrt{y^2+1}$
+\\$\wedge  \forall x \ e^x>0$
+\\$\wedge \ \forall y \ \sqrt{y^2+1}>y$
+\\$ \Rightarrow e^x=y + \sqrt{y^2+1}$
+\\$snh^{-1}x=x=ln(y+\sqrt{y^2+1})$
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{tikzpicture}[smooth,scale=0.7]
+  \begin{axis}[
+  ytick=\empty,xtick=\empty,axis lines=middle,
+  legend pos=south east,
+  legend entries={snhx,asnhx}]
+    \addplot[domain=-2:2,samples=50,smooth,red] {(e^x-e^(-x))/2};
+    \addplot[domain=-5:5,samples=50,smooth,blue] {ln(x+sqrt(x^2+1))};
+    \addplot[domain=0:3,samples=50,dotted,black] {x};
+  \end{axis}
+\end{tikzpicture}
+\end{minipage}
+\end{document}

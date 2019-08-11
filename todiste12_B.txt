@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\begin{document}
+\begin{minipage}{.4\textwidth}
+\begin{tikzpicture}[smooth,scale=0.4]
+  \draw[thick,color=black, fill=blue] (0,0) node[below,xshift=15]{$b$}--(2,0)--(0,4)--cycle node[left,yshift=-20]{$a$};
+  \draw[thick,color=black, fill=blue] (2,0) node[below,xshift=25]{$a$}--(6,0)--(6,2)--cycle node[right,yshift=-10]{$b$};
+  \draw[thick,color=black, fill=green] (0,4)node[above,yshift=-20,xshift=15]{$c$}--(2,0)
+  node[above,yshift=10,xshift=15]{$c$}--(6,2)--cycle;
+\end{tikzpicture}\end{minipage}
+\begin{minipage}{.6\textwidth}
+$\Delta =\frac{1}{2}(a+b)(a+b)=$
+\\$\color{blue}a*b\color{black}+\color{green}\frac{1}{2}(a^2+b^2)$
+\\$\color{blue}a*b\color{black}+\color{green}\frac{1}{2}c^2$
+\end{minipage}
+$cs(x-x)=cs0=1=cs^2x+sn^2x$
+\end{document}

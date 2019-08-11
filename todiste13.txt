@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{pgfplots,tikz}
+\begin{document}
+$\frac{1}{R_0}=\frac{1}{R_1}+\frac{1}{R_2}\quad \Rightarrow \quad R_0=\frac{R_1*R_2}{R_1+R_2}$\\$.$
+\\$(cs\varphi+isn\varphi)(cs\varphi+isn\varphi)=cs(2\varphi)+isn(2\varphi)\quad \wedge$
+\\$(cs\varphi-isn\varphi)(cs\varphi-isn\varphi)=cs(2\varphi)-isn(2\varphi)\quad \Rightarrow$
+\\$(a\pm bi)^n=|z|^n(cs(n\varphi)\pm isn(n\varphi))$
+\\$.$\\$.$\\
+\begin{minipage}{0.3\textwidth}
+\begin{tikzpicture}[smooth,scale=0.7]
+  \shade[ball color = gray!40, opacity = 0.4] (0,0) circle (2cm);
+  \draw (0,0) circle (2cm);
+  \draw (-2,0) arc (180:360:2 and 0.6);
+  \draw[dashed] (2,0) arc (0:180:2 and 0.6);
+  \fill[fill=black] (0,0) circle (1pt);
+  \draw[dashed] (0,0 ) -- node[above]{$r$} (2,0);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.7\textwidth}
+$y^2+x^2=r^2 \quad \Leftrightarrow \quad y^2=r^2-x^2 \quad \wedge \quad A=\pi y^2$
+\\$.$\\$V=\intop\nolimits_{-r}^{r}\pi y^2dx=\pi\intop\nolimits_{-r}^{r}(r^2-x^2)dx=\pi(r^2x-\frac{x^3}{3})^{r}_{-r}$
+\\$=\pi[(r^3-\frac{r^3}{3})-(-r^3+\frac{r^3}{3})]=\pi(\frac{2}{3}r^3+\frac{2}{3}r^3)=\frac{4}{3}\pi r^3$
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+$.$\\$.$\\
+$ax^2+bx+c=0\Leftrightarrow$
+\\$x^2+\frac{b}{a}x+\frac{b^2}{4a^2}=\frac{b^2}{ra^2}-\frac{c}{a}\Leftrightarrow$
+\\$(x+\frac{b}{2a})^2=\frac{b^2}{4a^2}-\frac{c}{a}=(\frac{\sqrt{b^2-4ac}}{2a})^2\Leftrightarrow$
+\\$x=\frac{-b\pm \sqrt{\Delta }}{2a}$
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+$ax^3+bx^2+cx+d=0\quad\wedge\quad x=y-\frac{b}{3a}\Rightarrow $
+\\$y^3+\frac{1}{a}(c-\frac{b^2}{3a})y+\frac{1}{a}(d+\frac{2b^3}{27a^2}-\frac{bc}{3a})=0$
+\\$e=\frac{1}{a}(c-\frac{b^2}{3a})\wedge f=\frac{1}{a}(d+\frac{2b^3}{27a^2}-\frac{bc}{3a})\Rightarrow $
+\\$y^3+ey+f=0\quad\wedge\quad y=z-\frac{e}{3z}\Rightarrow $
+\\$(z^3)^2+fz^3-\frac{e^3}{27}=0$
+\end{minipage}
+\end{document}

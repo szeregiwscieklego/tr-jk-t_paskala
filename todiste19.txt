@@ -1,0 +1,8 @@
+\documentclass{article}  
+\usepackage{enumitem}
+\begin{document}
+$\underbrace{lnn!=\displaystyle\sum_{i=1}^{n}lnn_i=\displaystyle\intop\nolimits_{1}^{n}lnndn}_{u=lnn, \quad dv=dn, \quad du=\frac{1}{n}dn, \quad v=n}$
+\\$\displaystyle\intop\nolimits_{}^{}udv=uv-\displaystyle\intop\nolimits_{}^{}vdu=nlnn|^{n}_{1}-\displaystyle\intop\nolimits_{1}^{n}\frac{1}{n}ndn=nlnn-n|^{n}_{1}=lnn!=nlnn-n+1$
+\\$ln100!=100ln100-100+1=361.5,\quad 100!=e^{361.5}$
+\\$lg100!=\frac{1}{ln10}ln100!=\frac{361.5}{2.3026}=157,\quad 100!=10^{157}$
+\end{document}

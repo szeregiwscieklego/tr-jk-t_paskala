@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{tkz-euclide}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usetkzobj{all}
+\begin{document}
+\scriptsize
+\begin{minipage}{.4\textwidth}
+\begin{tikzpicture}[smooth,scale=0.3]
+\node (qqU) at (1,6) {$bc$};
+\node (qqD) at (10,1) {$bc$};
+\draw[-] (0,0) -- (12,0)node[pos=0.4,below] {$a$}node[pos=0.9,below] {$c$};
+\draw[-] (0,7) -- (12,7)node[pos=0.1,above] {$c$}node[pos=0.6,above] {$a$};;
+\draw[-] (0,0) -- (0,7) node[pos=0.3,left] {$d$}node[pos=0.8,left] {$b$};
+\draw[-] (12,0) -- (12,7)node[pos=0.1,right] {$b$}node[pos=0.8,right] {$d$};
+\draw[-] (0,0) -- (9,2)node[pos=0.7,below] {$ab/2$};
+\draw[-] (12,7) -- (3,5)node[pos=0.7,above] {$ab/2$};
+\draw[-] (0,0) -- (3,5)node[pos=0.7,left] {$\frac{dc}{2}$};
+\draw[-] (12,7) -- (9,2)node[pos=0.7,right] {$\frac{dc}{2}$};
+\draw[-] (3,5) -- (3,7);
+\draw[-] (3,5) -- (0,5);
+\draw[-] (9,2) -- (12,2);
+\draw[-] (9,2) -- (9,0);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{.6\textwidth}
+\begin{equation}
+\begin{bmatrix}
+a & c \\
+b & d 
+\end{bmatrix}=(a+c)(b+d)-ab-cd-2bc=ad-bc
+\end{equation}
+\begin{equation}
+\begin{bmatrix}
+a & b \\
+c & d 
+\end{bmatrix}=(a+c)(b+d)-ab-cd-2bc=ad-bc
+\end{equation}
+\end{minipage}
+\end{document}

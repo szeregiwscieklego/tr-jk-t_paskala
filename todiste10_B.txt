@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\begin{document}
+\begin{minipage}{0.5\textwidth}
+\begin{tikzpicture}[smooth,scale=0.7]
+  \draw[thick,color=black, fill=blue] (0,0) --(2,0)--(0,4)--cycle;
+  \draw[thick,color=black, fill=blue] (2,0) --(6,0)--(6,2)--cycle;
+  \draw[thick,color=black, fill=blue] (6,2) --(6,6)--(4,6)--cycle;
+  \draw[thick,color=black, fill=blue] (0,6) --(4,6)--(0,4)--cycle;
+  \draw[thick,color=black, fill=green] (4,6)--(0,4)--(2,0)--(6,2)--cycle;
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{tikzpicture}[smooth,scale=0.7]
+  \draw[thick,color=black, fill=blue] (4,0) --(6,0)--(4,4)--cycle;
+  \draw[thick,color=black, fill=blue] (0,4) --(4,6)--(4,4)--cycle;
+  \draw[thick,color=black, fill=blue] (6,0) --(6,4)--(4,4)--cycle;
+  \draw[thick,color=black, fill=blue] (0,6) --(4,6)--(0,4)--cycle;
+  \draw[thick,color=black, fill=green] (4,6)--(6,6)--(6,4)--(4,4)--cycle;
+  \draw[thick,color=black, fill=green] (0,0)--(4,0)--(4,4)--(0,4)--cycle;
+\end{tikzpicture}
+\end{minipage}
+\end{document}

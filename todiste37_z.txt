@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\begin{document}
+\begin{minipage}{0.5\textwidth}
+$ \forall _{x \geq 0 } \ y=cshx$
+\\$\Leftrightarrow 2y=e^x+e^{-x} \\ \Leftrightarrow 2ye^x=e^{2x}+1 \\ \Leftrightarrow (e^x)^2-2y(e^x)+1=0$
+\\$\Delta =(-2y)^2-4=4(y^2-1)$
+\\$ \Rightarrow e^x=y \pm \sqrt{y^2-1}$
+\\$\wedge  \forall  _{x \geq 0 } \ e^x \geq 1$
+\\$\wedge \ \forall _{y \geq 1 } \ y-\sqrt{y^2-1}<1$
+\\$ \Rightarrow e^x=y + \sqrt{y^2-1}$
+\\$csh^{-1}x=x=ln(y+\sqrt{y^2-1})$
+\\
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{tikzpicture}[smooth,scale=0.7]
+  \begin{axis}[
+  ytick=\empty,xtick=\empty,axis lines=middle,
+  legend pos=south east,
+  legend entries={cshx,acshx}]
+    \addplot[domain=-2:2,samples=50,smooth,red] {(e^x+e^(-x))/2};
+    \addplot[domain=1:5,samples=50,smooth,blue] {ln(x+sqrt(x^2-1))};
+    \addplot[domain=0:3,samples=50,dotted,black] {x};
+  \end{axis}
+\end{tikzpicture}
+\end{minipage}
+\end{document}

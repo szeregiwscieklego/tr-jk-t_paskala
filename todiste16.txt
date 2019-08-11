@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{subcaption}
+\begin{document}
+\scriptsize
+$q^n-1=(q-1)(q^{n-1}+...+q^2+q+1)=q^n-q^{n-1}+q^{n-1}-...-1$
+\\$.$
+\\$n=pq, \quad p\neq q,\quad e\perp  \tau (n),\quad 1<e<\tau (n),\quad ed=1+k\tau (n)$
+\\$\tau (n)=n\displaystyle\prod_p(1-\frac{1}{p}),\quad \tau (35)=35(1-\frac{1}{5})(1-\frac{1}{7})=5*7(\frac{5-1}{5})(\frac{7-1}{7})=24$
+\\$y=x^emodn$
+\\$y^dmodn=(x^emodn)^dmodn=x^{ed}modn=x^{1+k\tau (n)}modn=xx^{k(p-1)(q-1)}mod(pq)=x$
+\\$.$\\$.$\\
+\begin{minipage}{0.4\textwidth}
+\begin{tikzpicture}[smooth,scale=0.4]
+\draw[-] (0,0) -- (9,0);
+\draw[-] (3,0) -- (3,4) node[right,yshift=-1cm] {$h$};
+\draw[-] (0,0) -- (3,4) node[left,yshift=-1cm,xshift=-1cm]
+{$b$};
+\draw[-] (0,0) -- (3,0) node[above,yshift=0.1cm,xshift=-0.7cm] {$ \varrho $};
+\draw[-] (3,0) -- (9,0) node[above,yshift=0.1cm,xshift=-1.0cm] {$ \xi $};
+\draw[-] (9,0) -- (3,4) node[above,xshift=1.5cm,yshift=-0.7cm] {$a$};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+$h=bsn\varrho=asn\xi \Leftrightarrow \frac{a}{sn\varrho}=\frac{b}{sn\xi}$
+\end{minipage}
+\\$.$\\$.$\\
+\begin{minipage}{0.4\textwidth}
+\begin{tikzpicture}[smooth,scale=0.4]
+\draw[black,thick] (2,2) circle (5cm);
+\draw (-1.7,5.2) node[right,xshift=8,yshift=-19]{$\phi$}
+  -- (5.8,5.2)
+  -- (2.05,-3) node[above,yshift=12,xshift=-4]{$ \phi $}
+  -- cycle;
+\draw (2.05,-3)--(2.05,5.2) node[left,yshift=-18,xshift=-3]{$ \vartheta $};
+\draw (2.05,2)--(-1.7,5.2);
+\draw (2.05,2)--(5.8,5.2);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+$2\phi=180^\circ-(180^\circ-\vartheta)=\vartheta$
+\end{minipage}
+\end{document}

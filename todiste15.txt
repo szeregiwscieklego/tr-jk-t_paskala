@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{subcaption}
+\begin{document}
+\scriptsize
+\begin{minipage}{0.3\textwidth}
+\begin{tikzpicture}[smooth,scale=0.4]
+\draw[-] (0,0) -- (9,0);
+\draw[-] (3,0) -- (3,4) node[right,yshift=-1cm] {$h$};
+\draw[-] (0,0) -- (3,4) node[left,yshift=-0.1cm,xshift=-0.3cm]
+{$a$};
+\draw[-] (0,0) -- (3,0) node[above,yshift=0.1cm,xshift=-0.7cm] {$ \gamma $} node[below,yshift=-0.1cm,xshift=-0.7cm] {$ b $};
+\draw[-] (3,0) -- (9,0);
+\draw[-] (9,0) -- (3,4) node[above,xshift=1.5cm,yshift=-0.7cm] {$c$};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.7\textwidth}
+$a^2=h^2+(acs\gamma)^2$
+\\$c^2=h^2+(b-acs\gamma)^2$
+\\$h^2=c^2-b^2+2abcs\gamma-a^2cs^2\gamma=a^2-a^2cs^2\gamma$
+\\$c^2=a^2+b^2-2abcs\gamma$
+\end{minipage}
+\\$.$\\$.$\\$.$\\
+\begin{minipage}{0.3\textwidth}
+\begin{tikzpicture}[smooth,scale=0.4]
+\draw[->] (0,0) -- (5,2) node[above,yshift=-0.3cm,xshift=-0.9cm] {$\vec{v}$};
+\draw[->] (0,0) -- (7,0.5) node[below,pos=0.5] {$\vec{w}$} node[above,pos=0.4] {$\mu$};
+\draw[->] (5,2) -- (7,0.5) node[right,pos=0.4] {$\vec{u}$};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{.7\textwidth}
+$\vec{v}+\vec{u}=\vec{w} \quad \wedge \quad \vec{u}=\vec{w}-\vec{v}\quad$ 
+\\$|\vec{u}|^2=\vec{v}^2+\vec{w}^2-2\vec{v}\vec{w}=
+|\vec{v}|^2+|\vec{w}|^2-2|\vec{v}||\vec{w}|cs\mu \quad \Rightarrow $
+\\$\vec{v}\vec{w}=|\vec{v}||\vec{w}|cs\mu$
+\end{minipage}
+\\$.$\\$.$\\$.$\\
+\begin{minipage}{.4\textwidth}
+\begin{tikzpicture}[smooth,scale=0.2]
+\node (qq2) at (1,0.7) {$\Upsilon$};
+\draw[->] (0,0) -- (2,7) node[xshift=0.5,pos=0.2,left] {$ \varsigma $}node[pos=0.8,left] {$\vec{u}$};
+\draw[->] (0,0) -- (9,2)node[pos=0.7,below] {$\vec{v}$};
+\draw[->] (3,5) -- (12,7);
+\draw[->] (0,0) -- (3,5);
+\draw[->] (9,2) -- (12,7)node[pos=0.7,right] {$\vec{w}$};
+\draw[->] (0,0) -- (-2,4)node[pos=0.8,left] {$\vec{t}=\vec{w}x\vec{v}$};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{.6\textwidth}
+$sn\Upsilon |\vec{u}||\vec{w}\ x\ \vec{v}|=sn(90^\circ-\varsigma)|\vec{u}||\vec{t}|$
+\\$=cs(\varsigma)|\vec{u}||\vec{w}\ x\ \vec{v}|=\vec{u}(\vec{w}x\vec{v})=$
+\begin{equation}
+[u_1 \ u_2 \ u_3]
+\begin{bmatrix}
+1 & 1 & 1 \\
+w_1 & w_2 & w_3\\
+v_1 & v_2 & v_3
+\end{bmatrix}=
+\begin{bmatrix}
+u_1 & u_2 & u_3\\
+w_1 & w_2 & w_3\\
+v_1 & v_2 & v_3
+\end{bmatrix}=\vec{u}x\vec{w}x\vec{v}
+\end{equation}
+\end{minipage}
+\end{document}

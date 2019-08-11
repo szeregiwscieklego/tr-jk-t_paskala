@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{pgfplots,tikz,amsmath}
+\begin{document}
+\scriptsize
+$.$\\$\binom{n}{k}+\binom{n}{k+1}=\frac{n!}{k!(n-k)!}+\frac{n!}{(k+1)!(n-k-1)!}=n![\frac{k+1}{(k+1)!(n-k)!}+\frac{n-k}{(k+1)!(n-k)!}]=\frac{n!(n+1)}{(k+1)!(n-k)!}=\binom{n+1}{k+1}$
+\normalsize
+$.$\\$.$
+\\$.\quad\quad\quad\quad 1$
+\\$.\quad\quad\quad 1\quad 1\quad\quad\quad
+(a+b)^n=\sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k$
+\\$.\quad\quad 1\quad 2 \quad 1\quad\quad\quad
+(a+b)^1=\binom{1}{0}a^{1-0}b^{0}+\binom{1}{1}a^{1-1}b^{1}=a^1+b^1$
+\\$.\quad 1\quad 3 \quad 3\quad 1\quad\quad (a+b)^{n+1}=(a+b)^n(a+b)=(\sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k)(a+b)=$
+\\$.$\\$.$\\$a^{n+1}b^0+\binom{n}{1}a^nb^1+...+\binom{n}{n}a^1b^n+$
+\\$.\quad\quad\quad\quad \binom{n}{0}a^nb^1+...+\binom{n}{n-1}a^1b^n+a^0b^{n+1}=$
+\\$\binom{n+1}{0}a^{n+1}b^0+\binom{n+1}{1}a^nb^1+...+\binom{n+1}{n}a^1b^n+\binom{n+1}{n+1}a^0b^{n+1}=$
+\\$\sum_{k=0}^{n+1}\binom{n+1}{k}a^{(n+1)-k}b^k$
+\end{document}

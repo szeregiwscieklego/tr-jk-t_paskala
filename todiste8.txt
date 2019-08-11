@@ -1,0 +1,16 @@
+\documentclass{article}  
+\usepackage{enumitem}
+\begin{document}
+$\frac{snx}{x}=1-\frac{x^2}{3!}+\frac{x^4}{5!}-\frac{x^6}{7!}+...= \quad // x=n*\pi\quad \wedge \quad n=\pm 1,\pm 2,\pm 3$
+\\$(1-\frac{x}{\pi})(1+\frac{x}{\pi})(1-\frac{x}{2\pi})(1+\frac{x}{2\pi})(1-\frac{x}{3\pi})(1+\frac{x}{3\pi})...=(1-\frac{x^2}{\pi^2})(1-\frac{x^2}{4\pi^2})(1-\frac{x^2}{9\pi^2})...$
+\\$.$
+\\$-\frac{1}{6}=-(\frac{1}{\pi^2}+\frac{1}{4\pi^2}+\frac{1}{9\pi^2}+...)=-\frac{1}{\pi^2}\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^2}$
+\\$.$
+\\$ \zeta(2)=\frac{\pi^2}{6}, \zeta(4)=\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^4}=\frac{\pi^4}{90},\zeta(6)=\frac{\pi^6}{945},\zeta(8)=\frac{\pi^8}{9450}$
+\\$.$
+\\$\zeta(z)=\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^z}=1+e^{-zln2}+...+e^{-zlnn}$
+\\$\zeta(z)'=0-ln2e^{-zln2}-...-lnne^{-zlnn}=-(\frac{ln2}{2^z}+...+\frac{lnn}{n^z})=-\displaystyle\sum_{n=2}^{\infty}=\frac{lnn}{n^z}$
+\\$.$
+\\$f'(z_0)=f'(x_0+iy_0)=\displaystyle\lim_{h  \rightarrow 0}\frac{u(x_0+h,y_0)-u(x_0,y_0)}{h}+\frac{i[v(x_0+h,y_0)-v(x_0,y_0)]}{h}=u_x(x_0,y_0)+iv_x(x_0,y_0)$
+\\$f'(z_0)=f'(x_0+iy_0)=\displaystyle\lim_{h  \rightarrow 0}\frac{u(x_0,y_0+h)-u(x_0,y_0)}{ih}+\frac{i[v(x_0,y_0+h)-v(x_0,y_0)]}{ih}=v_y(x_0,y_0)+iu_y(x_0,y_0)$
+\end{document}

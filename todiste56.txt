@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{cancel,pgfplots,tikz}
+\begin{document}
+\begin{minipage}{0.3\textwidth}
+\begin{tikzpicture}[smooth,scale=0.7]
+  \shade[ball color = gray!40, opacity = 0.4] (0,0) circle (2cm);
+  \draw (0,0) circle (2cm);
+  \draw (-2,0) arc (180:360:2 and 0.6);
+  \draw[dashed] (2,0) arc (0:180:2 and 0.6);
+  \fill[fill=black] (0,0) circle (1pt);
+  \draw[dashed] (0,0 ) -- node[below]{$R$}(2,0);
+  \draw[dashed] (0,0.8)--node[xshift=-10,above]{$Rcs\theta$}(1.8,0.8);
+  \draw[dashed] (1.80,0.7) arc (0:180:1.8 and 0.6);
+  \draw[dashed] (1.80,0.8) arc (0:180:1.8 and 0.6);
+  \draw (-1.8,0.7) arc (180:360:1.8 and 0.6);
+  \draw (-1.8,0.8) arc (180:360:1.8 and 0.6)node[right]{$ds=Rd\theta$};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.7\textwidth}
+$.$\\$.$\\$.$\\$.$\\
+$S=\intop\nolimits_{}^{}2\pi r Rd\theta=\intop\nolimits_{}^{}2\pi (Rcs\theta) Rd\theta=$
+\\$=2\pi R^2\intop\nolimits_{0}^{\frac{\pi}{2}}cs\theta d\theta 2=4\pi R^2 \cancelto{1}{sn\theta|^{\frac{\pi}{2}}_{0}}$
+\\$4\pi R^2$
+\end{minipage}
+\end{document}
